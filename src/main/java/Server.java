@@ -24,8 +24,6 @@ public class Server {
         List cars = csvReader.readAll().stream()
                 .skip(1)
                 .map(line -> new Car(line[0], line[1]))
-                .distinct()
-                .sorted(comparing(Car::getVendor).thenComparing(comparing(Car::getModel)))
                 .collect(toList());
 
         new WebServer(routes -> routes
