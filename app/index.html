@@ -7,7 +7,13 @@ styles: [/webjars/bootstrap/3.1.1/css/bootstrap.css, style.less]
 <div class="container">
   <div class="jumbotron">
     <h1>Hello, world!</h1>
-
     <p>It works!</p>
+  </div>
+  <div>
+    <ul>
+    [[#each cars]]
+    <li>[[vendor]] - [[model]]</li>
+    [[/each]]
+    </ul>
   </div>
 </div>
