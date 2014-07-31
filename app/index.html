@@ -12,7 +12,9 @@ styles: [/webjars/bootstrap/3.1.1/css/bootstrap.css, style.less]
   <div>
     <ul>
     [[#each cars]]
-    <li>[[vendor]] - [[model]] - [[engineType]] [[#if hybride]] - Hybride [[/if]] - [[co2]] - [[consoMixte]]</li>
+
+
+    <li>[[completeModel]] - <span class="[[CO2Emission]]">[[maxCO2]]</span> - [[minConsoMixte]]</li>
     [[/each]]
     </ul>
   </div>
