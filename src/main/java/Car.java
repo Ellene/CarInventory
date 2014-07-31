@@ -53,7 +53,12 @@ public class Car {
     return engineType;
   }
 
-  public boolean isHybride() {
+  public String getCompleteModel() {
+    String isHybrid = isHybrid() ? " oui" : " ";
+    return vendor + " " + model + " " + engineType + isHybrid;
+  }
+
+  public boolean isHybrid() {
     return isHybride;
   }
 
@@ -63,5 +68,9 @@ public class Car {
 
   public BigDecimal getConsoMixte() {
     return consoMixte;
+  }
+
+  public CarsComputation toCarsComputation() {
+    return new CarsComputation(getCompleteModel(), co2, consoMixte);
   }
 }
